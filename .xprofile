@@ -1,0 +1,4 @@
+nitrogen --restore &
+flameshot &
+picom -b &
+sh /home/kamran/.config/xidlehook.sh &
