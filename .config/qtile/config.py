@@ -188,8 +188,8 @@ extension_widget_defaults = dict(
 
 layouts = [
     layout.Columns(
-        # border_focus = colors[1],
-        # border_normal = colors[4],
+        border_focus = "#0ee9af",
+        border_normal = "#808080",
         border_width=3,
         margin=5,
         border_on_single=True,
@@ -330,21 +330,33 @@ screens = [
                     padding=0,
                     fontsize=45
                 ),
-                widget.CPU(
+                widget.TextBox(
+                    text="CPU",
                     font="Novamono for Powerline",
                     fontsize=14,
                     foreground=colors[1],
                     background=colors[6],
                     padding=5,
                 ),
-                # widget.ThermalSensor(
-                #     font="Novamono for Powerline",
-                #     fontsize=14,
-                #     foreground=colors[1],
-                #     background=colors[6],
-                #     padding=5,
-                #     tag_sensor="Tdie",
-                # ),
+                widget.GenPollText(
+                    func = lambda: subprocess.check_output("/home/kamran/.local/bin/cpuload").decode("utf-8"),
+                    font="Novamono for Powerline",
+                    fontsize=14,
+                    foreground=colors[1],
+                    background=colors[6],
+                    padding=2,
+                    mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + ' -e htop')},
+                ),
+                widget.GenPollText(
+                    update_interval = 1,
+                    func = lambda: subprocess.check_output("/home/kamran/.local/bin/cputemp").decode("utf-8"),
+                    font = "Novamono for Powerline",
+                    fontsize = 14,
+                    foreground = colors[1],
+                    background = colors[6],
+                    padding= 5,
+                    mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + ' -e watch sensors')},
+                ),
                 widget.TextBox(
                     text='',
                     background=colors[6],

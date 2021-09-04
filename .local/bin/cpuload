@@ -1,0 +1,5 @@
+#!/bin/bash
+
+load=$(uptime | cut -d ':' -f4 | cut -d ',' -f1 | cut -d ' ' -f2)
+
+printf "$load"
