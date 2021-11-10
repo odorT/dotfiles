@@ -1,0 +1,65 @@
+{
+    // Editor settings
+    "editor.suggestSelection": "first",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorStyle": "block",
+    "editor.fontSize": 14,
+    "editor.fontWeight": 550,
+    "editor.fontFamily": "'JetBrainsMono Nerd Font','Cascadia Code', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": true,
+    "editor.autoClosingBrackets": "languageDefined",
+    // Workbench settings
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.commandPalette.history": 50,
+    "workbench.editor.closeEmptyGroups": true,
+    "workbench.editor.decorations.colors": true,
+    "workbench.editor.decorations.badges": true,
+    "workbench.editor.showIcons": true,
+    // "workbench.editorAssociations": {
+    //     "*.py": "python",
+    //     "*.ipynb": "jupyter-notebook",
+    //     "*.pptx": "default"
+    // },
+    // File settings
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 2,
+    "files.enableTrash": true,
+    "files.insertFinalNewline": false,
+    "files.simpleDialog.enable": true,
+    // Terminal settings
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font','Cascadia Code', Consolas, 'Courier New', monospace",
+    "terminal.integrated.scrollback": 100000,
+    // // Telemetery settings
+    // "telemetry.enableTelemetry": false,
+    // "telemetry.enableCrashReporter": false,
+    // Extensions settings
+    "remote.SSH.configFile": "/home/kamran/.ssh/config",
+    "remote.SSH.remotePlatform": {
+        "arch-pc": "linux",
+        "192.168.87.131": "linux"
+    },
+    "python.languageServer": "Pylance",
+    "docker.showStartPage": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    }, 
+    "[terraform]": {
+        "editor.formatOnSave": true
+    },
+    "terraform.languageServer": {
+        "external": true
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "redhat.telemetry.enabled": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "editor.inlineSuggest.enabled": true,
+}
